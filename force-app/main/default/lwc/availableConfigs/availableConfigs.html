@@ -1,0 +1,48 @@
+<!--
+  @description       : 
+  @author            : Amol B
+  @group             : 
+  @last modified on  : 04-29-2023
+  @last modified by  : Amol B
+  Modifications Log
+  Ver   Date         Author   Modification
+  1.0   04-22-2023   Amol B   Initial Version
+-->
+<template>
+    <template if:true={showTable}>
+            <article class="slds-card">
+                <div class="slds-card__header slds-grid slds-theme_shade">
+                  <header class="slds-media slds-media_center slds-has-flexi-truncate ">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="standard:bundle_config" size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                      <h2 class="slds-card__header-title">
+                        <a class="slds-card__header-link" onclick={handleGotoRelatedList}>Available Configs</a>
+                      </h2>
+                    </div>
+                    <div class="slds-no-flex">
+                        <lightning-button class="slds-p-right_medium" label="Add" onclick={handleAddConfig} title="Add config to case"></lightning-button>
+                    </div>
+                  </header>
+                </div>
+                <div>
+                                        <c-genric-data-table records={allRecords} 
+                                        onsetselectedrecords={handleAllSelectedRows}
+                                        total-records={allRecords.length} 
+                                        columns = {columns}
+                                        key-field="Id"         
+                                        show-pagination
+                                        max-row-selection={allRecords.length}
+                                        table-height="200">
+                    </c-genric-data-table>   
+                </div>                               
+              </article>                       
+        <!-- </lightning-layout> -->        
+    </template>
+    <!-- <template for:each={selectedRows} for:item="rec">
+        <li key={rec.Id}>
+            {rec.Id}
+        </li>        
+    </template> -->
+</template>

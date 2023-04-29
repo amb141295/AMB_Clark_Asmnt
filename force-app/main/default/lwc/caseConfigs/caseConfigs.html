@@ -1,0 +1,42 @@
+<!--
+  @description       : 
+  @author            : Amol B
+  @group             : 
+  @last modified on  : 04-28-2023
+  @last modified by  : Amol B
+  Modifications Log
+  Ver   Date         Author   Modification
+  1.0   04-22-2023   Amol B   Initial Version
+-->
+<template>
+    <template if:true={showTable}>
+            <article class="slds-card">
+                <div class="slds-card__header slds-grid slds-theme_shade">
+                  <header class="slds-media slds-media_center slds-has-flexi-truncate ">
+                    <div class="slds-media__figure">
+                        <lightning-icon icon-name="action:new_note" size="small"></lightning-icon>
+                    </div>
+                    <div class="slds-media__body">
+                      <h2 class="slds-card__header-title">
+                        <a class="slds-card__header-link">Case Configs</a>
+                      </h2>
+                    </div>
+                    <div class="slds-no-flex">
+                        <lightning-button disabled={disableSend} class="slds-p-right_medium" label="Send" onclick={sendConfigs} title="Send case configs"></lightning-button>
+                    </div>
+                  </header>
+                </div>
+                <div>
+                    <c-genric-data-table records={allRecords} 
+                                        onsetselectedrecords={handleAllSelectedRows}
+                                        total-records={allRecords.length} 
+                                        columns = {columns}
+                                        key-field="Id"         
+                                        max-row-selection={allRecords.length}
+                                        hide-checkbox-col
+                                        table-height="200">
+                    </c-genric-data-table>   
+                </div>                               
+              </article>                       
+    </template>
+</template>
