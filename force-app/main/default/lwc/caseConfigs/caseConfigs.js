@@ -47,7 +47,7 @@ export default class CaseConfigs extends LightningElement {
             if(records.length>0){
                 this.showTable = true;
             }
-            if(records[0].Case__r.Status === 'Closed'){
+            if(records.length>0 && records[0].Case__r.Status === 'Closed'){
                 this.disableSend = true;
             }
             
