@@ -1,6 +1,6 @@
 # ClarkAssignment
 
-#Planning and development steps
+#Planning and development steps<br/>
 Step 1: Created the objects and fields as stated in the requirement document.<br/>
 Step 2: Cheked for any OOB features that can be used to implement a part of/whole requirement. Example: Dynamic related list in the FlexiPage.<br/>
 Step 3: Planned for the component architecture:<br/>
