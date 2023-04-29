@@ -45,7 +45,7 @@ public class Test_AvailableConfigsController {
         insert cc;
         AvailableConfigsController.addConfigsToCase(new List<String>{conList[2].Id,conList[0].Id}, c.Id);
         Test.stopTest();
-        System.assert([SELECT Id FROM Config__c].size()>0);
+        System.assert([SELECT Id FROM Case_Config__c].size()==2);
     }
     
     @IsTest
@@ -59,6 +59,6 @@ public class Test_AvailableConfigsController {
         Test.startTest();
 		AvailableConfigsController.addConfigsToCase(new List<String>{con.Id}, c.Id);
         Test.stopTest();
-        System.assert([SELECT Id FROM Config__c].size()>0);
+        System.assert([SELECT Id FROM Case_Config__c].size()==1);
     }
 }
