@@ -8,7 +8,7 @@ Step 4: Completed the Available configs component and tested its pagination, sor
 Step 5: Completed the Case config component basic UI with the help of generic data table component.<br/>
 Step 6: Completed the add functionality for Configs component and introduced the LMS on both the components as publisher and subscriber respectively.<br/>
 Step 7: Performed unit testing.<br/>
-Step 8: Prepared test class.<br/>
+Step 8: Prepared test class with 88%(AvailableConfigsController) and 87%(CaseConfigsController) coverage.<br/>
 Step 9: Cretaed a repo and pushed to repository.<br/>
 Step 10: Created a recording for explaining the overall functionality.<br/>
         
